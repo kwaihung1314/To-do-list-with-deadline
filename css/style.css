@@ -1,0 +1,337 @@
+body{
+	background-color: #EDF0F1;
+	font-family: 'Indie Flower', cursive;
+	padding: 100px 0 0 0;
+}
+
+header{
+	width:100%;
+	height: 100px;
+	background: #36b8d8;
+	border-radius: 0 0 10px 10px;
+	box-shadow: 0 2px 3px #b3b5b7;
+	position: fixed;
+	top:0;
+	left:0;
+	float: left;
+	color: #ffffff;
+	z-index: 2;
+}
+
+
+header div.input{
+	width: 85%;
+	height: 100px;
+	padding: 0px;
+	display: inline-block;
+	float: left;
+	padding: 10px 0 15px 15px;
+}
+
+header div.enter{
+	width: 15%;
+	height: 100px;
+	display: inline-block;
+	float:left;
+	position: relative;
+}
+
+header div.input div.title{
+	width: 100%;
+	height: 17px;
+	margin-bottom: 3px; 
+}
+header div.input div.title span{
+	height: 22px;
+	font-size: 18px;
+	line-height: 18px;
+	font-weight: 500;
+	display: inline-block;
+	width: 47%;
+	text-align: left;
+	float: left;
+	color: #000000;
+}
+
+header div.input div.title span:first-of-type{
+	margin: 0 4% 0 0;
+}
+
+header div.input input{
+	font-family: 'Indie Flower', cursive;
+	background: #5ebed6;
+	border:none;
+	border-radius: 5px 5px 5px 5px;
+	width:47%;
+	height: 50px;
+	text-indent: 15px;
+	font-size: 20px;
+	font-weight: 400;
+	color: #ffffff;
+	outline: none;
+	padding: 0; 
+	float: left;
+}
+
+header div.input div.box input:first-of-type{
+	margin: 0 4% 0 0;
+}
+
+header input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #ffffff;
+}
+header input::-moz-placeholder { /* Firefox 19+ */
+  color: #ffffff;
+}
+header input:-ms-input-placeholder { /* IE 10+ */
+  color: #ffffff;
+}
+header input:-moz-placeholder { /* Firefox 18- */
+  color: #ffffff;
+}
+
+header button{
+	position: absolute;
+	top: 50%;
+	left:50%;
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	background-color: #ffffff;
+	border: 1px solid #e0e2e2;
+	cursor: pointer;
+	margin: -25px 0 0 -25px;
+	outline: none;
+}
+
+header button svg{
+	width: 16px;
+	height: 16px;
+	fill: #5ebed6;
+	margin: auto;
+}
+
+header button:active{
+	box-shadow: 2px 2px 1px #b3b5b5 inset;
+}
+
+.container{
+	width: 100%;
+	padding: 15px;
+}
+
+ul.todo h1{
+	width: 100%;
+	font-size: 15px;
+	background: none;
+	color: #5ebed6;
+	margin-bottom: 15px; 
+}
+
+ul.todo{
+	margin-bottom: 30px;
+}
+
+ul.todo li {
+	width:100%;
+	min-height: 50px;
+	background-color: #ffffff;
+	border-radius: 5px;
+	outline: none;
+	padding: 10px 100px 10px 0px;
+	position: relative;
+	font-weight: 500;
+	margin: 0 0 15px 0;
+}
+
+ul.todo li p {
+	display: inline-block;
+	float: left;
+	width: 45%;
+	height: 30px;
+	background: none;
+	font-size: 22px;
+	line-height: 25px;
+	padding: 2.5px;
+	border-radius: 5px;
+	padding-left: 15px;
+	position: relative; 
+}
+
+ul.todo li p:first-of-type {
+	width: 55%;
+	padding-left: 15px;
+}
+
+ul.todo li p:first-of-type::after{
+	content: '';
+	width: 1px;
+	height: 30px;
+	background-color: #b3b5b5;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+ul.todo li:last-of-type{
+	margin-bottom: 0px;
+}
+
+ul.todo div#buttons {
+	width: 100px;
+	height: 50px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+ul.todo div#buttons button{
+	width: 50px;
+	height: 50px;
+	position: relative;
+	float: left;
+	border: none;
+	background: none;
+	/*cursor: pointer;*/
+}
+
+ul.todo div#buttons button:last-of-type::before{
+	content:'';
+	width: 1px;
+	height: 30px;
+	background-color: #b3b5b5;
+
+	position: absolute;
+	top: 10px;
+	right: 50px;
+}
+
+ul.todo div#buttons button svg{
+	width: 22px;
+	height: 22px;
+	margin: auto;
+	cursor: pointer;
+	position: relative;
+}
+
+ul.todo div#buttons button#remove svg{
+	fill:#b3b5b5;
+	transition: all 0.5s ease;
+}
+
+ul.todo div#buttons button#remove span{
+	max-width: 100%;
+	min-height: 15px;
+	background: none;
+	color: #5ebed6;
+	font-size: 12px;
+	line-height: 13px;
+	font-weight: 700;
+	font-family: 'Indie Flower', cursive;
+	visibility: hidden;
+	text-align: center;
+	z-index: 1;
+	padding-top:1px;
+
+	position: absolute;
+	top: 36px;
+	left: 0px;
+}
+
+ul.todo div#buttons button#remove svg:hover{
+	fill:#5ebed6;
+}
+
+ul.todo div#buttons button#remove svg:hover+span{
+	visibility: visible;
+}
+
+ul.todo div#buttons button#complete svg{
+	fill:#5ebed6;
+	border: 1px solid #5ebed6;
+	transition: all 0.2s ease;
+}
+
+ul.todo div#buttons button#complete span{
+	max-width: 100%;
+	min-height: 15px;
+	background: none;
+	color: #5ebed6;
+	font-size: 12px;
+	line-height: 13px;
+	font-weight: 700;
+	font-family: 'Indie Flower', cursive;
+	visibility: hidden;
+	text-align: center;
+	z-index: 1;
+	padding-top:1px;
+
+	position: absolute;
+	top: 36px;
+	left: 0px;
+}
+
+ul.todo div#buttons button#complete svg:hover{
+	fill: #ffffff;
+	background-color: #5ebed6;
+	border: 1px solid #5ebed6;
+}
+
+ul.todo div#buttons button#complete svg:hover+span{
+	visibility: visible;
+}
+
+ul.todo#completed div#buttons button#complete svg{
+	fill: #ffffff;
+	background-color: #5ebed6;
+	border: 1px solid #5ebed6;
+	transition: all 0.2s ease;
+}
+
+ul.todo#completed div#buttons button#complete span{
+	max-width: 100%;
+	min-height: 15px;
+	background: none;
+	color: #5ebed6;
+	font-size: 12px;
+	line-height: 13px;
+	font-weight: 700;
+	font-family: 'Indie Flower', cursive;
+	visibility: hidden;
+	text-align: center;
+	z-index: 1;
+	padding-top:1px;
+
+	position: absolute;
+	top: 36px;
+	left: 0px;
+}
+
+ul.todo#completed div#buttons button#complete svg:hover{
+	fill:#5ebed6;
+	background-color: #ffffff;
+	border: 1px solid #5ebed6;
+}
+
+ul.todo#completed div#buttons button#complete svg:hover+span{
+	visibility: visible;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
